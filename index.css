@@ -1,0 +1,23 @@
+body {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  height: 100vh;
+  width: 100vw;
+}
+body > header,
+main,
+footer {
+  padding: 1rem;
+}
+header {
+  background-color: antiquewhite;
+}
+main {
+  background-color: aquamarine;
+}
+footer {
+  background-color: azure;
+}
