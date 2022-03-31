@@ -7,10 +7,33 @@ body {
   height: 100vh;
   width: 100vw;
 }
+html,
+body {
+  accent-color: #7fffd4;
+}
+
+/* make dialogs etc. loke more like native font */
+.system-like-font {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+/* avoid selecting text etc. for copy if it is part of buttons etc. */
+.unselectable {
+  user-select: none;
+}
+
+/* avoid reload on dragging touch down */
+body {
+  overscroll-behavior-y: contain;
+}
+
+/* pancake layout, use device safe layout (taking round corners or notch into account) */
 body > header,
 main,
 footer {
-  padding: 1rem;
+  padding: env(safe-area-inset-top, 1rem) env(safe-area-inset-right, 1rem)
+    env(safe-area-inset-bottom, 1rem) env(safe-area-inset-left, 1rem);
 }
 header {
   background-color: antiquewhite;
